@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:background="@color/surface_bg"
+    tools:context=".HomeActivity">
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_nav">
+
+        <!-- Main Content -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Include your main content here -->
+
+
+   
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="88dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <ImageButton
+                    android:id="@+id/buttonDrawer"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/nav_icon"
+                    android:contentDescription="Nav"
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:visibility="gone"
+                    android:clickable="false"
+                    android:focusable="false" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/buttonDrawer"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+                    <TextView
+                        android:id="@+id/welcomeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome,"
+                        android:textSize="14sp"
+                        android:textColor="@color/neutral_gray"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:id="@+id/welcomeTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shahid"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:textColor="@color/neutral_black"/>
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="6dp"
+                            android:src="@drawable/favorite"
+                            android:tint="@color/accent_orange"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/headerChip"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:background="@drawable/pill_orange"
+                    android:padding="6dp">
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/settings"
+                        android:tint="@color/colorWhite"/>
+                </LinearLayout>
+
+                
+
+            </RelativeLayout>
+
+                <!-- Progress Tracker Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/progressTrackerCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/colorWhite"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@color/surface_card">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SPOKEN"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="@color/neutral_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp">
+
+                            <TextView
+                                android:id="@+id/progressTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Progress Tracker"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/neutral_black"/>
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_neutral"
+                                android:tint="@color/neutral_black"/>
+                        </RelativeLayout>
+
+                        <!-- Progress line + milestones -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="12dp">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/progress_line_bg"/>
+
+                            <View
+                                android:id="@+id/progressLineActive"
+                                android:layout_width="0dp"
+                                android:layout_height="4dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="0dp"
+                                android:background="@drawable/progress_line_active"
+                                android:layout_weight="0"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="4">
+
+                            <!-- Milestone 1 (active) -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <View
+                                    android:id="@+id/ms1Dot"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:background="@drawable/progress_circle_active"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:text="milestone 1"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/neutral_gray"/>
+                            </LinearLayout>
+
+                            <!-- Milestone 2 -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <View
+                                    android:id="@+id/ms2Dot"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:background="@drawable/progress_circle_inactive"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:text="milestone 2"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/neutral_gray"/>
+                            </LinearLayout>
+
+                            <!-- Milestone 3 -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <View
+                                    android:id="@+id/ms3Dot"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:background="@drawable/progress_circle_inactive"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:text="milestone 3"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/neutral_gray"/>
+                            </LinearLayout>
+
+                            <!-- Milestone 4 -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <View
+                                    android:id="@+id/ms4Dot"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:background="@drawable/progress_circle_inactive"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:text="milestone 4"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/neutral_gray"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Learning"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/neutral_black"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"/>
+
+            
+
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignBounds"
+                android:columnOrderPreserved="true"
+                android:rowCount="4"
+                android:columnCount="1"
+                android:useDefaultMargins="false">
+
+
+                <!-- Card 1: keep original ID but hide from Home -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileCard"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/colorWhite"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@color/surface_card">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:foreground="?attr/selectableItemBackground">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/profilelogo"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Profile"
+                            android:textStyle="bold"
+                            android:textColor="@color/neutral_black"
+                            android:textSize="16sp"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Card 2: keep original ID but hide from Home -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/aboutCard"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/colorWhite"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@color/surface_card">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:foreground="?attr/selectableItemBackground">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/about"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="About App"
+                            android:textStyle="bold"
+                            android:textColor="@color/neutral_black"
+                            android:textSize="16sp"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Speak to Learn (visible) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/speakLearnCard"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/colorWhite"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@color/surface_card">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_ripple">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/aispeak"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingLeft="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Speak to Learn"
+                                android:textStyle="bold"
+                                android:textColor="@color/neutral_black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Practice, engage"
+                                android:textSize="12sp"
+                                android:textColor="@color/neutral_gray"/>
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_chevron_right"
+                            android:tint="@color/neutral_gray"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Learning Path (visible) -->
+                
+
+                <!-- Dictionary (visible) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dictionaryCard"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/colorWhite"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@color/surface_card">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_ripple">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/wordtranslator"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingLeft="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dictionary"
+                                android:textStyle="bold"
+                                android:textColor="@color/neutral_black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Find word meanings"
+                                android:textSize="12sp"
+                                android:textColor="@color/neutral_gray"/>
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_chevron_right"
+                            android:tint="@color/neutral_gray"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/learningCard"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/colorWhite"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@color/surface_card">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_ripple">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/learnbytest"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingLeft="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Learning Path"
+                                android:textStyle="bold"
+                                android:textColor="@color/neutral_black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Track your progress"
+                                android:textSize="12sp"
+                                android:textColor="@color/neutral_gray"/>
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_chevron_right"
+                            android:tint="@color/neutral_gray"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/feedbackCard"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/colorWhite"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@color/surface_card">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:foreground="?attr/selectableItemBackground">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/feedback"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Feedback"
+                            android:textStyle="bold"
+                            android:textColor="@color/neutral_black"
+                            android:textSize="16sp"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+
+            <!-- Voice Call (visible full-width) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/callCard"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/colorWhite"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="@color/surface_card">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/card_ripple">
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/favorite"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Voice Call"
+                            android:textStyle="bold"
+                            android:textColor="@color/neutral_black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Practice speaking"
+                            android:textSize="12sp"
+                            android:textColor="@color/neutral_gray"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_chevron_right"
+                        android:tint="@color/neutral_gray"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            
+
+        </LinearLayout>
+
+    </ScrollView>
+        </RelativeLayout>
+
+        <!-- Navigation View (kept for IDs, hidden to remove left drawer UI) -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/drawer_header"
+            app:menu="@menu/drawer_items"
+            android:visibility="gone" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <!-- Bottom Navigation as per new UI -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav"
+        app:itemIconTint="@color/bottom_nav_item_color"
+        app:itemTextColor="@color/bottom_nav_item_color"
+        app:labelVisibilityMode="labeled"
+        app:itemActiveIndicatorStyle="@style/BottomNavActiveIndicator"
+        app:backgroundTint="@color/bottom_nav_bg"
+        android:elevation="8dp"/>
+
+</RelativeLayout>
+
+

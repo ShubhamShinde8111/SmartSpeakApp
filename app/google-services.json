@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1044910466939",
+    "project_id": "smartspeakup-10493",
+    "storage_bucket": "smartspeakup-10493.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044910466939:android:ade85735b6f8e736cf7fde",
+        "android_client_info": {
+          "package_name": "com.example.registration_login_module"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBluOMRQnYVWmQQu1Et0aSUdN2mqj-pjmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
