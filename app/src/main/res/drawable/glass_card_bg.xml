@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    
+    <!-- Semi-transparent white fill for glass effect - increased opacity -->
+    <solid android:color="#40FFFFFF"/>
+    
+    <!-- Rounded corners matching card style -->
+    <corners android:radius="28dp"/>
+    
+    <!-- White border for glass edge highlight -->
+    <stroke 
+        android:width="1.5dp"
+        android:color="#66FFFFFF"/>
+</shape>

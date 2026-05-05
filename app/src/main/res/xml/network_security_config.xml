@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Allow HTTP for local LAN token server during development -->
+        <domain includeSubdomains="false">192.168.1.5</domain>
+        <!-- Add other LAN/IPs here as needed -->
+    </domain-config>
+</network-security-config>
+
+

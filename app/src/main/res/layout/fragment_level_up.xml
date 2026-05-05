@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Level Up Celebration Dialog — Full-screen overlay -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/levelUpRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/level_up_bg"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/levelUpContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <!-- Star burst area -->
+        <TextView
+            android:id="@+id/tvStarBurst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✨⭐✨"
+            android:textSize="48sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- LEVEL UP text -->
+        <TextView
+            android:id="@+id/tvLevelUpTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/level_up_title"
+            android:textColor="@color/coin_gold"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Level Number -->
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/level_badge_bg" />
+
+            <TextView
+                android:id="@+id/tvNewLevel"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-black" />
+        </FrameLayout>
+
+        <!-- Message -->
+        <TextView
+            android:id="@+id/tvLevelUpMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You reached a new level!"
+            android:textColor="@color/level_up_text"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Continue Button -->
+        <TextView
+            android:id="@+id/btnContinue"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn_mission_launch" />
+    </LinearLayout>
+
+</FrameLayout>

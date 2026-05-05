@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppBottomNavigationViewActiveIndicator">
+        <item name="android:insetLeft">4dp</item>
+        <item name="android:insetRight">4dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="android:background">@drawable/bottom_nav_active_bg</item>
+    </style>
+    
+    <style name="BottomNavActiveIndicator">
+        <item name="android:insetLeft">6dp</item>
+        <item name="android:insetRight">6dp</item>
+        <item name="android:insetTop">6dp</item>
+        <item name="android:insetBottom">6dp</item>
+        <item name="android:background">@drawable/bottom_nav_active_bg</item>
+    </style>
+    
+    <!-- Card Animation Styles -->
+    <style name="CardElevatedStyle">
+        <item name="android:elevation">8dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardBackgroundColor">@color/surface_card</item>
+        <item name="android:translationZ">8dp</item>
+    </style>
+    
+    <!-- Modern Text Styles -->
+    <style name="CardTitleStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+    
+    <style name="CardSubtitleStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+</resources>

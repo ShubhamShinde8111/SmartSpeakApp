@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp" />
+            <solid android:color="#408B5CF6" />
+        </shape>
+    </item>
+    <!-- Inner button -->
+    <item android:top="2dp" android:bottom="4dp" android:left="2dp" android:right="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp" />
+            <gradient
+                android:startColor="#8B5CF6"
+                android:endColor="#6D28D9"
+                android:angle="0" />
+        </shape>
+    </item>
+</layer-list>

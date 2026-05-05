@@ -1,0 +1,14 @@
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomNavigation"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="@color/white"
+    app:elevation="16dp"
+    app:itemIconTint="@color/selector_bottom_nav_icon"
+    app:itemTextColor="@color/selector_bottom_nav_icon"
+    app:labelVisibilityMode="labeled"
+    app:menu="@menu/bottom_nav"
+    app:itemActiveIndicatorStyle="@style/AppBottomNavigationViewActiveIndicator"
+    android:paddingTop="8dp"/>

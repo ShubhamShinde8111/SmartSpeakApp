@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">Smart SpeakUp</string>
+    <string name="user_name">Name: %1$s</string>
+    <string name="user_email">Email: %1$s</string>
+    <string name="user_mobile">Mobile: %1$s</string>
+    <string name="error_parsing">Error parsing response!</string>
+    <string name="error_fetching">Failed to fetch user details. Please try again.</string>
+    <string name="user_not_found">User not found</string>
+    <string name="invalid_user_id">Invalid user ID</string>
+    <string name="about_app">Welcome to Our App!
+
+Our app is your personal guide to improving English grammar and speaking skills. Whether you’re a beginner or aiming to refine your language abilities, this app is designed to help you communicate confidently and effectively.
+
+How it Works:
+
+1.Speak to the App: Using your phone’s microphone, you can speak directly to the app. Say sentences, phrases, or even have free-form conversations in English.
+2.Speech Analysis: The app carefully listens to your input, identifies grammatical errors, and notes any pronunciation issues.
+3.Instant Feedback: Once your speech is processed, the app highlights your mistakes and provides corrected versions in proper English.
+4.Learn and Improve: Along with corrections, the app offers explanations and tips, helping you understand your mistakes and improve over time.
+
+Why Use This App?
+Our primary goal is to make language learning simple, interactive, and effective. With regular practice:
+
+   You’ll improve your grammar and pronunciation.
+   You’ll develop confidence in speaking English.
+   You’ll receive constructive feedback tailored to your needs.
+Whether you’re preparing for interviews, presentations, or everyday conversations, this app is a reliable companion for your learning journey.
+
+Start Today:
+Speaking is the key to mastering any language. Use the app daily, learn from your mistakes, and watch your English improve with every session.
+
+Make English learning fun, easy, and accessible. Let’s help you speak with clarity and confidence!</string>
+
+    <string name="feedback_header">Feedback!</string>
+    <string name="email_hint">Your Email Address</string>
+    <string name="query_hint">Write your query or feedback here...</string>
+    <string name="submit_button">Submit</string>
+    <string name="back">BACK</string>
+
+    <string name="agora_channel">smarttalk</string>
+    <!-- Use this App ID for Agora SDK; moved from hardcode to resources -->
+    <string name="agora_app_id">YOUR_AGORA_APP_ID_HERE</string>
+    <!-- UID to use when joining with a pre-generated token; 0 = auto -->
+    <string name="agora_token_uid">0</string>
+    <!-- For development: empty token allows joining without authentication -->
+    <string name="agora_temp_token"></string>
+    <!-- Configure this to your deployed token server base URL
+         Example accepted formats:
+         - https://example.com/rtcToken?channel=smarttalk&uid=0&role=publisher
+         - https://example.com (we'll append /rtcToken?...)
+    -->
+    <string name="agora_token_server_base"></string>
+    <string name="huggingface_api_key">YOUR_HUGGINGFACE_API_KEY_HERE</string>
+    <string name="groq_api_key">YOUR_GROQ_API_KEY_HERE</string>
+    <!-- AI keys for Speech Practice -->
+    <string name="google_ai_api_key">YOUR_GOOGLE_AI_API_KEY_HERE</string>
+    <string name="assembly_ai_api_key">YOUR_ASSEMBLYAI_API_KEY_HERE</string>
+    <!-- OpenAI API key (optional - for fallback) -->
+    <string name="openai_api_key"></string>
+    <!-- Perplexity AI API key -->
+    <string name="perplexity_api_key">YOUR_PERPLEXITY_API_KEY_HERE</string>
+    <!-- Choose a supported v1 model id from ListModels, e.g., gemini-1.5-pro or gemini-1.5-flash -->
+    <string name="gemini_model_id">gemini-1.5-flash</string>
+
+    <!-- ===== GAMIFICATION STRINGS ===== -->
+    <!-- XP System -->
+    <string name="xp_label">XP</string>
+    <string name="xp_progress_format">%1$d / %2$d XP</string>
+    <string name="level_label">Level %1$d</string>
+    <string name="level_up_title">LEVEL UP!</string>
+    <string name="level_up_message">You reached Level %1$d! Keep going!</string>
+    <string name="coins_label">%1$d</string>
+
+    <!-- Mission Hub -->
+    <string name="mission_hub_title">Mission Control</string>
+    <string name="mission_day_label">Day %1$d</string>
+    <string name="mission_today">Today\'s Mission</string>
+    <string name="mission_completed">Mission Complete!</string>
+    <string name="mission_reward_xp">+%1$d XP</string>
+    <string name="mission_reward_coins">+%1$d Coins</string>
+    <string name="mission_start">Launch Mission</string>
+    <string name="mission_completed_label">✅ Completed</string>
+    <string name="mission_timeline_title">Mission Timeline</string>
+    <string name="mission_no_history">Start your first mission to see your progress!</string>
+
+    <!-- Supernova Mode -->
+    <string name="supernova_active">SUPERNOVA MODE</string>
+    <string name="supernova_activated">🌌 Supernova Mode Activated! Double XP enabled!</string>
+    <string name="supernova_requirement">Maintain a 14-day streak to activate Supernova Mode</string>
+    <string name="supernova_xp_boost">2× XP Active</string>
+
+    <!-- Badge Names -->
+    <string name="badge_first_steps">First Steps</string>
+    <string name="badge_on_fire">On Fire</string>
+    <string name="badge_champion">Champion</string>
+    <string name="badge_rocket">Rocket</string>
+    <string name="badge_diamond">Diamond</string>
+    <string name="badge_supernova">Supernova</string>
+    <string name="badge_sharpshooter">Sharpshooter</string>
+    <string name="badge_chatterbox">Chatterbox</string>
+
+    <!-- XP Award Feedback -->
+    <string name="xp_gained_toast">+%1$d XP</string>
+    <string name="coins_gained_toast">+%1$d 🪙</string>
+    <string name="daily_login_xp">Welcome back! +15 XP</string>
+
+    <!-- Home Gamification -->
+    <string name="home_mission_card_title">🚀 Today\'s Mission</string>
+    <string name="home_mission_card_tap">Tap to view mission details</string>
+</resources>

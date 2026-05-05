@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreenActivity"
+    android:background="@drawable/splash_gradient_bg">
+
+    <!-- Premium Animated Background Elements -->
+    <!-- Large glow circle - top left -->
+    <View
+        android:id="@+id/circle1"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:background="@drawable/splash_circle_glow"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="-0.3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="-0.15" />
+
+    <!-- Medium glow circle - bottom right -->
+    <View
+        android:id="@+id/circle2"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:background="@drawable/splash_circle_glow"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.25"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
+
+    <!-- Small accent circle - center right -->
+    <View
+        android:id="@+id/circle3"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/splash_circle_glow"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <!-- Glassmorphism Logo Container -->
+    <FrameLayout
+        android:id="@+id/logoContainer"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/glass_card_bg"
+        android:padding="28dp"
+        android:elevation="8dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/appNameText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/logo" />
+
+    </FrameLayout>
+
+    <!-- App Name - Premium Typography -->
+    <TextView
+        android:id="@+id/appNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smart SpeakUp"
+        android:textColor="@color/white"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:letterSpacing="-0.03"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="#30000000"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        app:layout_constraintBottom_toTopOf="@+id/taglineText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoContainer" />
+
+    <!-- Tagline - Elegant Uppercase -->
+    <TextView
+        android:id="@+id/taglineText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="MASTER ENGLISH WITH AI"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.25"
+        android:alpha="0"
+        app:layout_constraintBottom_toTopOf="@+id/loadingContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameText" />
+
+    <!-- Premium Circular Loading Indicator -->
+    <LinearLayout
+        android:id="@+id/loadingContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taglineText">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/loadingProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:indicatorColor="@color/white"
+            app:trackColor="#25FFFFFF"
+            app:trackCornerRadius="3dp"
+            app:indicatorSize="36dp"
+            app:trackThickness="3dp" />
+
+        <TextView
+            android:id="@+id/loadingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Initializing..."
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:alpha="0.7"
+            android:letterSpacing="0.08"
+            android:fontFamily="sans-serif-light" />
+    </LinearLayout>
+
+    <!-- Footer Branding -->
+    <TextView
+        android:id="@+id/versionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="POWERED BY ADVANCED NLP"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        android:alpha="0"
+        android:letterSpacing="0.15"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

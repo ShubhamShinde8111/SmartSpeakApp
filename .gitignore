@@ -1,0 +1,55 @@
+# ============================================================
+#  Android .gitignore — Smart SpeakUp
+# ============================================================
+
+# ----- Build Outputs -----
+/build
+app/build
+**/build/
+
+# ----- Gradle -----
+.gradle
+*.iml
+gradle.properties.local
+
+# ----- Local Config (machine-specific, never commit) -----
+local.properties
+
+# ----- IDE — Android Studio / IntelliJ -----
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/.idea/deploymentTargetDropDown.xml
+/.idea/*.xml
+.DS_Store
+
+# ----- Sensitive / Secret Files -----
+# ⚠️  Replace google-services.json with a template before committing to public repos
+# google-services.json
+google-services.backup.json
+
+# ----- JVM Crash Logs & Heap Dumps -----
+hs_err_pid*.log
+replay_pid*.log
+*.hprof
+
+# ----- Captures & Profiling -----
+/captures
+*.ap_
+
+# ----- Native Build -----
+.externalNativeBuild
+.cxx
+
+# ----- OS Generated -----
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ----- Signing Keys (never commit keystores) -----
+*.jks
+*.keystore
+release.properties

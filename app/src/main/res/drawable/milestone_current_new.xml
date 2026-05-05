@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Animated pulse ring -->
+    <item android:top="0dp" android:left="0dp" android:right="0dp" android:bottom="0dp">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="3dp" android:color="@color/progress_current" />
+            <size android:width="48dp" android:height="48dp" />
+        </shape>
+    </item>
+    
+    <!-- Main current circle with gradient -->
+    <item android:top="4dp" android:left="4dp" android:right="4dp" android:bottom="4dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="20dp"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:startColor="@color/progress_current"
+                android:endColor="@color/progress_current_dark" />
+            <size android:width="40dp" android:height="40dp" />
+            <stroke android:width="2dp" android:color="@android:color/white" />
+        </shape>
+    </item>
+    
+    <!-- Inner highlight dot -->
+    <item android:top="16dp" android:left="16dp" android:right="16dp" android:bottom="16dp">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/white" />
+            <size android:width="8dp" android:height="8dp" />
+        </shape>
+    </item>
+</layer-list>

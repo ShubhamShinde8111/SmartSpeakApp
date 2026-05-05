@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brand Colors -->
+    <color name="colorPrimary">#FF6B35</color>
+    <color name="colorPrimaryLight">#FF8C42</color>
+    <color name="colorPrimaryDark">#E55A00</color>
+    <color name="colorAccent">#FF6B35</color>
+    
+    <!-- Progress Tracker Colors -->
+    <color name="progress_completed">#FF6B35</color>
+    <color name="progress_current">#FF6B35</color>
+    <color name="progress_current_dark">#E55A00</color>
+    <color name="progress_locked">#E0E0E0</color>
+    <color name="progress_line_active">#FF6B35</color>
+    <color name="progress_line_active_dark">#E55A00</color>
+    <color name="progress_line_inactive">#E0E0E0</color>
+    <color name="milestone_shadow">#20FF6B35</color>
+    <color name="milestone_glow">#30FF6B35</color>
+    <color name="milestone_ripple">#20FF6B35</color>
+    <color name="current_text">#FF6B35</color>
+    <color name="completed_text">#4CAF50</color>
+    <color name="locked_text">#999999</color>
+    
+    <!-- Orange Gradient Colors -->
+    <color name="gradient_start">#FF6B35</color>
+    <color name="gradient_end">#FF8C42</color>
+    
+    <color name="hero_gradient_start">#FF6B00</color>
+    <color name="hero_gradient_end">#FF8C42</color>
+    <color name="card_gradient_start">#FFFFFF</color>
+    <color name="card_gradient_end">#F8F8F8</color>
+    
+    <!-- Background Colors -->
+    <color name="surface_bg">#FFFFFF</color>
+    <color name="surface_card">#F5F5F5</color>
+    <color name="surface_card_elevated">#FFFFFF</color>
+    <color name="surface_primary">#FFF8F3</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#333333</color>
+    <color name="text_tertiary">#666666</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="error">#FF3B30</color>
+    
+    <!-- Interactive Colors -->
+    <color name="accent_orange">#FF6B00</color>
+    <color name="accent_blue">#2196F3</color>
+    <color name="accent_purple">#9C27B0</color>
+    
+    <!-- Borders & Lines -->
+    <color name="border_light">#E0E0E0</color>
+    <color name="divider">#E0E0E0</color>
+    
+    <!-- Bottom Navigation -->
+    <color name="bottom_nav_icon">#666666</color>
+    <color name="bottom_nav_icon_selected">#FF6B00</color>
+    <color name="bottom_nav_bg">#FFFFFF</color>
+    
+    <!-- Legacy Colors (keeping for compatibility) -->
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="neutral_black">#000000</color>
+    <color name="neutral_gray">#666666</color>
+    <color name="grey">#666666</color>
+    <color name="background">#F5F5F5</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_color">#000000</color>
+    <color name="text_secondary_color">#333333</color>
+    
+    <!-- Additional Modern Colors -->
+    <color name="glass_white">#40FFFFFF</color>
+    <color name="shadow_light">#0A000000</color>
+    <color name="shadow_medium">#1A000000</color>
+    
+    <!-- Standard Colors (required by Android themes) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Additional Colors for compatibility -->
+    <color name="green">#4CAF50</color>
+    <color name="red">#FF3B30</color>
+    <color name="orange">#FF6B00</color>
+    <color name="dark_orange">#E55A00</color>
+    <color name="my_primary">#FF6B00</color>
+    
+    <!-- Call Screen Colors -->
+    <color name="surface_light">#F8F8F8</color>
+    <color name="ripple_light">#20FF6B35</color>
+    <color name="ripple_danger">#20FF3B30</color>
+    <color name="error_dark">#D32F2F</color>
+    
+    <!-- Legacy colors that might be referenced elsewhere -->
+    <color name="colorBottomCardStart">#FF6B00</color>
+    <color name="colorBottomCardEnd">#FF8C42</color>
+    <color name="colorToolbarStart">#FF6B00</color>
+    <color name="colorToolbarEnd">#FF8C42</color>
+    <color name="textColor">#000000</color>
+    <color name="colorRed">#FF3B30</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="accent">#FF6B35</color>
+
+    <!-- GAMIFICATION COLORS -->
+    <!-- XP Progress Bar -->
+    <color name="xp_bar_start">#FF6B35</color>
+    <color name="xp_bar_mid">#FF9800</color>
+    <color name="xp_bar_end">#FFD700</color>
+    <color name="xp_bar_track">#1A1A2E</color>
+    <color name="xp_bar_track_light">#2D2D44</color>
+
+    <!-- Coin / Gold -->
+    <color name="coin_gold">#FFD700</color>
+    <color name="coin_gold_dark">#DAA520</color>
+    <color name="coin_shadow">#40DAA520</color>
+
+    <!-- Supernova Mode -->
+    <color name="supernova_purple">#7B2FF7</color>
+    <color name="supernova_purple_light">#9D5CFF</color>
+    <color name="supernova_glow">#407B2FF7</color>
+    <color name="supernova_bg_start">#0D0221</color>
+    <color name="supernova_bg_end">#1A0533</color>
+
+    <!-- Mission Hub -->
+    <color name="mission_bg_start">#0D1B2A</color>
+    <color name="mission_bg_mid">#1B2838</color>
+    <color name="mission_bg_end">#0D1B2A</color>
+    <color name="mission_card_bg">#162032</color>
+    <color name="mission_card_border">#2A3A50</color>
+    <color name="mission_accent">#00D4FF</color>
+    <color name="mission_text_primary">#EAEAEA</color>
+    <color name="mission_text_secondary">#8899AA</color>
+
+    <!-- Level Badge -->
+    <color name="level_badge_start">#FF6B35</color>
+    <color name="level_badge_end">#FFD700</color>
+    <color name="level_badge_glow">#40FFD700</color>
+
+    <!-- Badge Tier Colors -->
+    <color name="badge_bronze">#CD7F32</color>
+    <color name="badge_silver">#C0C0C0</color>
+    <color name="badge_gold">#FFD700</color>
+    <color name="badge_platinum">#E5E4E2</color>
+
+    <!-- Level Up Dialog -->
+    <color name="level_up_bg">#CC0D1B2A</color>
+    <color name="level_up_star">#FFD700</color>
+    <color name="level_up_text">#FFFFFF</color>
+
+    <!-- Mission Status -->
+    <color name="mission_completed">#4CAF50</color>
+    <color name="mission_active">#00D4FF</color>
+    <color name="mission_locked">#555555</color>
+</resources>
